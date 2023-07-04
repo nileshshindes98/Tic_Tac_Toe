@@ -41,12 +41,11 @@ public class Tic_tac_Toe_Game {
 
             if(isValidMove(row,col)){
                 board[row][col] = currentplayer;
-
-        }
+            }
             scanner.close();
         }
     }
-    //UC3
+       //UC3
         private void printBoard() {
         for (int row = 1; row < 10; row++)
         {
