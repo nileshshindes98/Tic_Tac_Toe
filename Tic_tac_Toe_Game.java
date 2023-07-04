@@ -1,11 +1,12 @@
 package tic_tac_toe;
 
+import java.util.Scanner;
+
 public class Tic_tac_Toe_Game {
-    public class TicTacToe{
         private char[][] board ;
         private char currentplayer;
 
-        public TicTacToe() {
+        public Tic_tac_Toe_Game() {
           board = new char[10][10];
           currentplayer ='x';
           initalizeBoard();
@@ -18,5 +19,17 @@ public class Tic_tac_Toe_Game {
                 }
             }
         }
+        // create method
+        public void playGame(){
+            boolean gameWon = false;
+            boolean fameTied = false;
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Welcome to the tic tac toe game ");
+            System.out.println("Player 1 : X");
+            System.out.println("Player 1 : O");
+            System.out.println("start the game");
+            scanner.close();
+
+        }
     }
-}
+
