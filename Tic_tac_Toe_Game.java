@@ -20,7 +20,7 @@ public class Tic_tac_Toe_Game {
         }
     }
 
-    // create method
+    // create method playgame
     public void playGame() {
         boolean gameWon = false;
         boolean gameTied = false;
@@ -31,21 +31,31 @@ public class Tic_tac_Toe_Game {
         System.out.println("start the game");
 
         //uc4
-
         while (!gameWon && !gameTied) {
             System.out.println("current board");
             printBoard();
-            System.out.println("player"+ currentplayer+ "enter your move(row[1-9] and column [1-9] :");
+            System.out.println("player" + currentplayer + "enter your move(row[1-9] and column [1-9] :");
             int row = scanner.nextInt();
             int col = scanner.nextInt();
 
-            if(isValidMove(row,col)){
+            if (isValidMove(row, col)) {
                 board[row][col] = currentplayer;
+            } else {
+                System.out.println("Invalid Move");
             }
+        }
             scanner.close();
         }
+
+
+    // valid till these condition
+    private boolean isValidMove(int row, int col) {
+        if(row <1 || row >9 || col<1 || col>9){
+            return false;
+        }
+        return board[row][col]=='-';
     }
-       //UC3
+       //UC3 - method show Board to display the current Board
         private void printBoard() {
         for (int row = 1; row < 10; row++)
         {
@@ -56,13 +66,7 @@ public class Tic_tac_Toe_Game {
     }
         System.out.println();
     }
-// valid till these condition
-    private boolean isValidMove(int row, int col) {
-        if(row <1 || row >9 || col<1 || col>9){
-            return false;
-        }
-        return board[row][col]=='-';
-    }
+
 }
 
 
