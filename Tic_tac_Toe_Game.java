@@ -12,8 +12,8 @@ public class Tic_tac_Toe_Game {
         }
 
         private void initalizeBoard(){
-            for(int row = 1 ; row <=10; row++){
-                for(int col =1;col<10; col++){
+            for(int row = 1 ; row <=10; row++) {
+                for (int col = 1; col < 10; col++) {
                     board[row][col] = '-';
                 }
             }
