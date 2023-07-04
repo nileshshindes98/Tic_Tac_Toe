@@ -31,7 +31,8 @@ public class Tic_tac_Toe_Game {
         System.out.println("start the game");
 
         //uc4
-        while (!gameWon && gameTied) {
+
+        while (!gameWon && !gameTied) {
             System.out.println("current board");
             printBoard();
             System.out.println("player"+ currentplayer+ "enter your move(row[1-9] and column [1-9] :");
